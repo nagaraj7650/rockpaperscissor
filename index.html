@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rockpaperscissor</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+    </style>
+</head>
+<body>
+<h1 id="heading">Rock Paper Scissor</h1>
+<div id="computerchose"></div>
+<div class="main">
+<div class="game">
+    <div class="choices">
+        <img src="rock.png" class="choice" id="rock">
+        <img src="paper.png" class="choice" id="paper">
+        <img src="scissor.png" class="choice" id="scissors">
+    </div>
+    
+</div>
+</div>
+<div class="pleasework"></div>
+<div class="scorecard">
+    <div class="userScore player">
+        <p id="user-score">0</p>
+        <p class="playername">You</p>   
+    </div>
+    <div class="winnerDraw">
+        <p id="winnerText">Play your move</p>
+    </div>
+    <div class="compScore player">
+        <p id="comp-score">0</p>
+        <p class="playername">Computer</p>
+    </div>
+</div>
+<div class="resetGame">
+    <button id="reset">Reset Game</button>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
