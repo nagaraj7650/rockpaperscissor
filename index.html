@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rockpaperscissor</title>
+    <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
@@ -13,20 +13,19 @@
 <h1 id="heading">Rock Paper Scissor</h1>
 <div id="computerchose"></div>
 <div class="main">
-<div class="game">
-    <div class="choices">
-        <img src="rock.png" class="choice" id="rock">
-        <img src="paper.png" class="choice" id="paper">
-        <img src="scissor.png" class="choice" id="scissors">
+    <div class="game">
+        <div class="choices">
+            <img src="rock.png" class="choice" id="rock">
+            <img src="paper.png" class="choice" id="paper">
+            <img src="scissor.png" class="choice" id="scissors">
+        </div>
     </div>
-    
-</div>
 </div>
 <div class="pleasework"></div>
 <div class="scorecard">
     <div class="userScore player">
         <p id="user-score">0</p>
-        <p class="playername">You</p>   
+        <p class="playername">You</p>
     </div>
     <div class="winnerDraw">
         <p id="winnerText">Play your move</p>
@@ -36,9 +35,21 @@
         <p class="playername">Computer</p>
     </div>
 </div>
+
+<!-- Dropdown for selecting rounds -->
+<div class="game-mode">
+    <label for="rounds">Select rounds:</label>
+    <select id="rounds">
+        <option value="3">3 Rounds</option>
+        <option value="5">5 Rounds</option>
+        <option value="7">7 Rounds</option>
+    </select>
+</div>
+
 <div class="resetGame">
     <button id="reset">Reset Game</button>
 </div>
-    <script src="script.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>
