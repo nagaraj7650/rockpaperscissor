@@ -1,180 +1,170 @@
 * {
     margin: 0;
     padding: 0;
-    border: border-box;
+    box-sizing: border-box;
 }
+
 body {
     background-color: black;
     font-family: handjet;
 }
-@media only screen and (max-width: 500px) {
-    #heading {
-        height: 5vh;
-    }
-}
+
 #heading {
     height: 12vh;
-    font-size:10vh;
-    /* background-color: #A4AF69; */
+    font-size: 10vh;
     color: white;
-    font-family: handjet;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 600;
+    text-align: center;
+    padding: 0 1rem;
 }
+
 .main {
-    height: 40vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
+
 .game {
-    height: 20vh;
-    /* background-color: beige; */
-    width: 70vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .choices {
-    height: 15vh;
-    width: 50vw;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
 }
+
 .choice {
     height: 10vh;
     width: 10vh;
     border-radius: 50%;
-    border: 0.4vh  black;
     transition: border 0.1s, height 0.3s, width 0.3s;
 }
+
 .choice:hover {
     border: 1vh solid rgb(9, 24, 24);
-    
-
 }
+
 .choice:active {
     border: 1vh solid green;
 }
+
 .scorecard {
-    height: 12vh;
-    width: 100vw;
-    /* background-color: blue; */
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem 0;
 }
 
 .player {
-    height: 8vh;
-    width: 20vw;
+    width: 30%;
+    min-width: 120px;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
 
-}
-.pleasework {
-    height: 4vh;
-    width: 100vw;
-    /* background-color: blue; */
-}
 .winnerDraw {
-    height: 8vh;
-    width: 20vw;
-    background-color: black ;
-    
+    width: 30%;
+    min-width: 120px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem;
 }
+
 p {
     color: white;
     font-family: handjet;
     font-size: 5vh;
+    text-align: center;
+}
 
-}
-.winnerDraw {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
 .resetGame {
-    height: 8vh;
-    width: 100vw;
+    height: 10vh;
+    width: 100%;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2vh;
 }
+
 #reset {
     height: 7vh;
-    width: 20vw;
+    width: 30vw;
+    min-width: 120px;
+    font-size: 4vh;
+    border: none;
+    background-color: black;
     color: white;
-    font-family: handjet;
-    font-size: 5vh;
-    transition: background-color 0.4s;
-    border: 0;
+    transition: background-color 0.3s;
     position: fixed;
     bottom: 0;
-    /* background-color: blue; */
-    background-color: black;
 }
+
 #reset:active {
     background-color: green;
 }
+
 #computerchose {
     color: white;
     height: 4vh;
-    width: 100vw;
-    font-family: handjet;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    width: 100%;
     font-size: 3vh;
     text-align: center;
-    /* background-color: aliceblue; */
+    padding-top: 1vh;
 }
+
 @media only screen and (max-width: 500px) {
-    /* body {
-        font-size: 4vh;
-    } */
     #heading {
-        height: 6vh;
-        font-size: 5vh;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: blue;
+        font-size: 6vh;
+        height: auto;
+        padding: 1rem;
     }
+
+    .choice {
+        width: 80px;
+        height: 80px;
+    }
+
     .choices {
-        /* background-color: blue; */
-        height: 200px;
-        width: 100vw;
-        /* background-color: blue; */
-        flex-wrap: wrap;
-        justify-content: center;
         flex-direction: column;
+        gap: 1rem;
     }
-    #computerchose {
-        height: 150px;
-        text-align: center;
-        font-size: 7vh;
-        color: grey;
+
+    .player,
+    .winnerDraw {
+        width: 100%;
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+
+    #winnerText {
+        font-size: 3vh;
     }
 
     #reset {
-        position: fixed;
-        font-size: 7vh;
-        height: 8vh;
-        bottom: 0;
-        width: 15vw;
+        width: 60vw;
+        font-size: 5vh;
     }
-    #winnerText {
-        font-size: 3vh;
+
+    #computerchose {
+        font-size: 4vh;
+        height: auto;
+        padding: 1rem 0;
     }
 }
